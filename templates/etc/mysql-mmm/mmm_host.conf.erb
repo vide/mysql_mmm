@@ -1,0 +1,7 @@
+<host <%= host %>>
+    ip          <%= ip %>
+    mode        <%= mode %>
+    <% if has_variable?("peer") then -%>
+    peer        <%= peer %>
+    <% end -%>
+</host>

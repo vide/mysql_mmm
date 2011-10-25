@@ -1,0 +1,23 @@
+include mmm_common.conf
+
+<monitor>
+        ip                      <%= ip %>
+        pid_path                <%= mon_pid_path %>
+        bin_path                <%= mon_bin_path %>
+        status_path             <%= status_path %>
+        mode                    <%= mode %>
+        ping_ips                <%= ping_ips %>
+</monitor>
+
+<host default>
+        monitor_user            <%= monitor_user %>
+        monitor_password        <%= monitor_password %>
+</host>
+
+<check default>
+        check_period            <%= check_period %>
+        trap_period             <%= trap_period %>
+        timeout                 <%= mon_timeout %>
+</check>
+
+debug <%= mon_debug %>

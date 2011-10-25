@@ -1,0 +1,21 @@
+active_master_role	writer
+
+<host default>
+    cluster_interface       <%= cluster_interface %>
+
+    pid_path                <%= agent_default_pid %>
+    bin_path                <%= agent_default_binpath %>
+
+    replication_user        <%= replication_user %>
+    replication_password    <%= replication_password %>
+
+    agent_user              <% agent_user %>
+    agent_password          <% agent_password %>
+</host>
+
+<% mmm_hosts.each do |host| -%>
+include mmm_host-<%= host %>.conf
+<% end -%>
+
+include mmm_role-reader.conf
+include mmm_role-writer.conf

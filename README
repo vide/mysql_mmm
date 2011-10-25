@@ -1,0 +1,8 @@
+mysql_mmm module for Puppet
+---------------------------
+
+A puppet module to install and configure mysql-mmm-(agent|monitor).
+
+It's have been tested with Debian Squeeze and right now it gives
+just a basic conf. More options will be added in the future.
+
